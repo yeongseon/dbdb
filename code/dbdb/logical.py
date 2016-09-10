@@ -11,8 +11,8 @@ class ValueRef(object):
         return string.decode('utf-8')
 
     def __init__(self, referent=None, address=0):
-        self._referent = referent
-        self._address = address
+        self._referent = referent  #comment
+        self._address = address  #comment
 
     @property
     def address(self):
