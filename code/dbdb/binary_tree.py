@@ -86,7 +86,8 @@ class BinaryTree(LogicalBase):
     def _insert(self, node, key, value_ref):
         if node is None:
             new_node = BinaryNode(
-                self.node_ref_class(), key, value_ref, self.node_ref_class(), 1) #comment
+                self.node_ref_class(), key, value_ref, self.node_ref_class(), 1) 
+                #comment 因为是一棵新树,所以它的左右分支两个self.node_ref_class()初始化时没有参数.
         elif key < node.key:
             new_node = BinaryNode.from_node(
                 node,
